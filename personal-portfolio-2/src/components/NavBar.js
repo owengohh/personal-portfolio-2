@@ -26,7 +26,14 @@ function NavBar() {
 	const menuItems = ["Home", "About", "Projects", "Contact"];
 
 	return (
-		<AppBar position="static" sx={{ backgroundColor: "#373331" }}>
+		<AppBar
+			position="fixed"
+			sx={{
+				backgroundColor: "#373331",
+				borderRadius: "50px",
+				maxWidth: "calc(100% - 20px)",
+				margin: "10px",
+			}}>
 			<Toolbar>
 				<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
 					Owen Goh
@@ -40,14 +47,11 @@ function NavBar() {
 							onClick={handleDrawerToggle}>
 							<MenuIcon />
 						</IconButton>
-						<Drawer
-							anchor="right"
-							open={drawerOpen}
-							onClose={handleDrawerToggle}>
-							<List>
+						<Drawer anchor="top" open={drawerOpen} onClose={handleDrawerToggle}>
+							<List sx={{ backgroundColor: "#373331", color: "white"}}>
 								{menuItems.map((item, index) => (
-									<ListItem button key={index}>
-										<ListItemText primary={item} />
+									<ListItem key={index}>
+										<ListItemText primary={item}/>
 									</ListItem>
 								))}
 							</List>

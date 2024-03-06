@@ -1,6 +1,7 @@
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
+import About from "./components/About";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -22,6 +23,7 @@ function App() {
 	<ThemeProvider theme={theme}>
 		<NavBar></NavBar>
 		<Home></Home>
+		<About></About>
 	</ThemeProvider>
 	);
 }

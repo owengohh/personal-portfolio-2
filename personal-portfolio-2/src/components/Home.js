@@ -1,37 +1,31 @@
-import { Grid, Typography, Box, Avatar } from '@mui/material';
+import React from "react";
+import { Container, Typography, Button, Avatar } from "@mui/material";
 
 function Home() {
-  return (
-    <Box sx={{ flexGrow: 1, p: 2 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
-          <Box
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            height="100%"
-          >
-            <Typography variant="h4" gutterBottom>
-              Hello, I'm Owen
-            </Typography>
-            <Typography variant="body1">
-              I'm a software developer specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            height="100%"
-          >
-            <Avatar alt="John Doe" src="/profilepic.png" sx={{ width: 200, height: 200 }} />
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
-  );
+	return (
+		<Container maxWidth="md" sx={{ marginTop: "8em", textAlign: "center" }}>
+			<Avatar
+				alt="Owen Goh"
+				src="/profilepic.png"
+				sx={{ width: "50vw", height: "50vw", margin: "0 auto", marginBottom: "2em", maxHeight: 500, maxWidth: 500, border: "2px solid #000"}}
+			/>
+			<Typography
+				variant="h2"
+				component="h1"
+				gutterBottom
+				sx={{
+					fontWeight: "bold",
+				}}>
+				Welcome to Owen Goh's Website
+			</Typography>
+			<Typography variant="h5" component="h2" gutterBottom>
+				This is a place where I share my projects and experiences.
+			</Typography>
+			<Button variant="contained" color="primary" size="large">
+				Learn More
+			</Button>
+		</Container>
+	);
 }
 
 export default Home;
